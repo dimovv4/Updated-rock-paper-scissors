@@ -1,6 +1,8 @@
 import random
 
 options = ("rock", "paper", "scissors")
+player_score = 0
+computer_score = 0
 
 while True:
     while True:
@@ -19,10 +21,13 @@ while True:
         print("It's a tie!")
     elif (player == "rock" and computer == "scissors") or (player == "paper" and computer == "rock") or (player == "scissors" and computer == "paper"):
         print("You win!")
-
+        player_score += 1
     else:
         print("You lose!")
+        computer_score += 1
 
+    print(f"Player Score: {player_score}")
+    print(f"Computer Score: {computer_score}")
 
     while True:
         play_again = input("Play again? (y/n): ").lower()
@@ -35,3 +40,4 @@ while True:
         break
 
 print("Thanks for playing!")
+
